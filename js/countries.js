@@ -1,3 +1,4 @@
+document.getElementById('country-detail-sec').style.display = "none";
 const loadCountries = () => {
     fetch('https://restcountries.eu/rest/v2/all')
         .then(res => res.json())
@@ -28,9 +29,12 @@ const loadCountryByName = name => {
         .then(data => displayCountryDetail(data[0]))
 }
 const displayCountryDetail = country => {
+    document.getElementById('country-detail-sec').style.display = "block";
+    console.log(country);
     const countryDiv = document.getElementById('country-detail');
     countryDiv.innerHTML = `
     <h4>${country.name}</h4>
+    <p>Capital: ${country.capital}</p>
     <p>Population: ${country.population}</p>
     <img width="200px" src="${country.flag}">
     `;
