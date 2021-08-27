@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+}
+#countries{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.country{
+    text-align: center;
+    border: 2px solid tomato;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 20px 0;
+}
